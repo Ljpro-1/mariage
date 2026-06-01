@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>À Propos | ANDRIANJANAHARY FANKALAZANA Dinah</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+    color:#1e293b;
+    line-height:1.8;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.profile-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #d4af37;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:2.8rem;
+    margin-bottom:10px;
+}
+
+.hero .subtitle{
+    color:#d4af37;
+    font-size:1.1rem;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    opacity:.95;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:22px;
+    margin-bottom:30px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+h2{
+    color:#0f172a;
+    margin-bottom:20px;
+    font-size:1.8rem;
+}
+
+h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:#d4af37;
+    border-radius:10px;
+    margin-top:8px;
+}
+
+p{
+    margin-bottom:15px;
+}
+
+/* SCHEMA */
+
+.schema{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+
+.schema-box{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    border-top:5px solid #d4af37;
+}
+
+.schema-box h3{
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+/* UTILITES */
+
+.utility-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.utility-card{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:15px;
+    border-left:5px solid #d4af37;
+}
+
+.utility-card h3{
+    margin-bottom:10px;
+    color:#0f172a;
+}
+
+/* SKILLS */
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.skill{
+    background:#0f172a;
+    color:white;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+}
+
+/* CONTACT */
+
+.contact{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.contact-box{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    border-radius:15px;
+}
+
+.contact-box h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.contact-box a{
+    color:white;
+    text-decoration:none;
+}
+
+.contact-box a:hover{
+    color:#d4af37;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    background:#d4af37;
+    color:#0f172a;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:700;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.highlight{
+    color:#d4af37;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2rem;
+}
+
+.profile-img{
+    width:150px;
+    height:150px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<img src="laza.png"
+alt="ANDRIANJANAHARY FANKALAZANA Dinah"
+class="profile-img">
+
+<h1>ANDRIANJANAHARY FANKALAZANA Dinah</h1>
+
+<div class="subtitle">
+Développeur Web • Créateur de Solutions Numériques
+</div>
+
+<p>
+Passionné par les technologies modernes, je conçois des solutions web
+qui permettent aux particuliers, associations et entreprises de tirer
+profit de la puissance du numérique. Mon objectif est de transformer
+des idées en projets concrets, utiles et accessibles.
+</p>
+
+</section>
+
+<div class="container">
+
+<section class="card">
+
+<h2>Qui suis-je ?</h2>
+
+<p>
+Bonjour et bienvenue.
+Je suis <span class="highlight">ANDRIANJANAHARY FANKALAZANA Dinah</span>,
+développeur web passionné par la création de solutions numériques modernes.
+</p>
+
+<p>
+Aujourd'hui, le monde évolue grâce à la technologie. Derrière chaque
+application mobile, chaque réseau social, chaque banque en ligne ou
+chaque plateforme de commerce électronique se cache le travail de
+développeurs qui conçoivent et améliorent ces outils.
+</p>
+
+<p>
+Mon ambition est de participer à cette évolution en créant des sites web
+et des applications qui répondent à des besoins réels et apportent une
+valeur ajoutée aux utilisateurs.
+</p>
+
+</section>
+
+<section class="card">
+
+<h2>La puissance de la programmation</h2>
+
+<p>
+La programmation est l'art de donner des instructions à un ordinateur afin
+de résoudre des problèmes, automatiser des tâches et créer des solutions
+innovantes.
+</p>
+
+<div class="schema">
+
+<div class="schema-box">
+<h3>💡 Une idée</h3>
+<p>Un besoin ou un problème à résoudre.</p>
+</div>
+
+<div class="schema-box">
+<h3>⌨️ Programmation</h3>
+<p>Transformation de l'idée en solution numérique.</p>
+</div>
+
+<div class="schema-box">
+<h3>🌐 Application</h3>
+<p>Création d'un site web ou d'un outil utile.</p>
+</div>
+
+<div class="schema-box">
+<h3>🚀 Résultat</h3>
+<p>Gain de temps, productivité et croissance.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>Exemples concrets de son utilité</h2>
+
+<div class="utility-grid">
+
+<div class="utility-card">
+<h3>🏥 Santé</h3>
+<p>Gestion des dossiers médicaux et prise de rendez-vous en ligne.</p>
+</div>
+
+<div class="utility-card">
+<h3>🎓 Éducation</h3>
+<p>Plateformes d'apprentissage et cours à distance.</p>
+</div>
+
+<div class="utility-card">
+<h3>🏦 Finance</h3>
+<p>Applications bancaires et paiements sécurisés.</p>
+</div>
+
+<div class="utility-card">
+<h3>🛒 Commerce</h3>
+<p>Boutiques en ligne accessibles partout dans le monde.</p>
+</div>
+
+<div class="utility-card">
+<h3>🚕 Transport</h3>
+<p>Réservation de taxis et suivi en temps réel.</p>
+</div>
+
+<div class="utility-card">
+<h3>🤖 Intelligence Artificielle</h3>
+<p>Automatisation et assistance intelligente.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>Mes compétences</h2>
+
+<div class="skills">
+
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Firebase</div>
+<div class="skill">Responsive Design</div>
+<div class="skill">Sites Vitrines</div>
+<div class="skill">Landing Pages</div>
+<div class="skill">UX/UI Design</div>
+<div class="skill">Cloud Database</div>
+<div class="skill">Interfaces Modernes</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>Contact</h2>
+
+<div class="contact">
+
+<div class="contact-box">
+<h3>📧 Email</h3>
+<a href="mailto:lazadiah@gmail.com">
+lazadiah@gmail.com
+</a>
+</div>
+
+<div class="contact-box">
+<h3>💬 WhatsApp</h3>
+<a href="https://wa.me/261330608880">
++261 33 06 088 80
+</a>
+</div>
+
+<div class="contact-box">
+<h3>👤 Nom complet</h3>
+<p>ANDRIANJANAHARY FANKALAZANA Dinah</p>
+</div>
+
+</div>
+
+<a href="index.html" class="btn">
+← Retour au site principal
+</a>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 ANDRIANJANAHARY FANKALAZANA Dinah • Développeur Web
+</footer>
+
+</body>
+</html>

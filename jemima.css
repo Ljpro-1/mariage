@@ -1,0 +1,325 @@
+/* Variables de couleur : Blanc et Marron */
+:root {
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --primary-brown: #6d4c41;
+    --light-brown: #a1887f;
+    --dark-brown: #3e2723;
+    --accent-gold: #d7ccc8;
+    --text-color: #4e342e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style des Cartes */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--accent-gold);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(109, 76, 65, 0.05);
+}
+
+/* En-tête */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #f5f0eb, var(--bg-color));
+}
+
+.main-title {
+    font-family: 'Alex Brush', cursive;
+    font-size: 4.5rem;
+    color: var(--primary-brown);
+}
+
+.heart-divider {
+    color: var(--light-brown);
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Salutations */
+.date {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--light-brown);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.salutation-text {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Section Couple */
+.wedding-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--light-brown);
+    margin-bottom: 10px;
+}
+
+.couple-names {
+    font-family: 'Alex Brush', cursive;
+    font-size: 3.5rem;
+    color: var(--dark-brown);
+}
+
+.ampersand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: var(--light-brown);
+}
+
+/* Verset */
+.verse-section {
+    position: relative;
+    background: #faf6f0;
+}
+
+.quote-icon {
+    font-size: 4rem;
+    font-family: serif;
+    line-height: 0;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.bible-verse {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.bible-reference {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-brown);
+}
+
+/* Photos */
+.photo-container {
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tri-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.wedding-photo {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.wedding-photo:hover {
+    transform: scale(1.02);
+}
+
+/* Formulaire */
+.form-section h3 {
+    margin-bottom: 25px;
+    color: var(--primary-brown);
+    font-weight: 400;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: var(--primary-brown);
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--accent-gold);
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: inherit;
+    color: var(--text-color);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-brown);
+}
+
+.btn-submit, .btn-admin {
+    background-color: var(--primary-brown);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn-submit:hover, .btn-admin:hover {
+    background-color: var(--dark-brown);
+}
+
+.thanks-footer {
+    margin-top: 25px;
+    font-style: italic;
+    color: var(--light-brown);
+}
+
+/* Alerte stylée (Modal) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(62, 39, 35, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-heart {
+    font-size: 3rem;
+    color: var(--primary-brown);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.btn-close {
+    background: var(--accent-gold);
+    color: var(--dark-brown);
+    border: none;
+    padding: 8px 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Admin Dashboard */
+.admin-section {
+    background: #f5f0eb;
+    margin-top: 60px;
+}
+
+.admin-section h3 {
+    margin-bottom: 15px;
+}
+
+.messages-container {
+    text-align: left;
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.message-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--primary-brown);
+}
+
+.msg-name {
+    font-weight: 600;
+    color: var(--dark-brown);
+    font-size: 0.95rem;
+}
+
+.msg-text {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid var(--accent-gold);
+    font-size: 0.9rem;
+    color: var(--light-brown);
+}
+
+.dev-credit {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* Outils d'affichage */
+.hidden {
+    display: none !important;
+}
+
+/* Responsivité Mobile */
+@media (max-width: 600px) {
+    .photo-grid, .tri-grid {
+        grid-template-columns: 1fr;
+    }
+    .wedding-photo {
+        height: 250px;
+    }
+    .main-title {
+        font-size: 3rem;
+    }
+    .couple-names {
+        font-size: 2.5rem;
+    }
+}

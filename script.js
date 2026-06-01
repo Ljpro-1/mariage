@@ -1,6 +1,11 @@
-// Importation des SDK Firebase nécessaires
-import { initializeApp } from "https://gstatic.com";
-import { getDatabase, ref, push, onValue } from "https://gstatic.com";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 // Configuration de votre projet Firebase (À remplacer par vos vrais identifiants)
 const firebaseConfig = {
@@ -14,7 +19,7 @@ const firebaseConfig = {
   };
 // Initialisation de Firebase
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+const db = getFirestore(app);
 
 // Éléments du DOM
 const wishesForm = document.getElementById('wishesForm');
@@ -38,14 +43,14 @@ wishesForm.addEventListener('submit', function(e) {
     const hafatra = document.getElementById('hafatra').value;
 
     // Référence vers l'emplacement 'messages' dans Firebase
-    const messagesRef = ref(database, 'messages');
+const messagesRef = collection(db, "messages");
 
-    // Sauvegarde des données
-    push(messagesRef, {
-        anarana: anarana,
-        firariantsoa: hafatra,
-        timestamp: Date.now()
-    }).then(() => {
+addDoc(messagesRef, {
+    anarana: anarana,
+    firariantsoa: hafatra,
+    timestamp: Date.now()
+})
+    .then(() => {
         // Réinitialiser le formulaire
         wishesForm.reset();
         // Afficher l'alerte stylée
@@ -75,32 +80,24 @@ btnLogin.addEventListener('click', () => {
 });
 
 // Fonction pour récupérer et afficher les messages en temps réel
-function loadMessages() {
-    const messagesRef = ref(database, 'messages');
-
-    onValue(messagesRef, (snapshot) => {
-        messagesList.innerHTML = ""; // Vider la liste avant mise à jour
+async function loadMessages() {
+    const querySnapshot = await getDocs(collection(db, "messages"));
+    
+    messagesList.innerHTML = "";
+    
+    querySnapshot.forEach((doc) => {
+        const value = doc.data();
         
-        if (snapshot.exists()) {
-            const data = snapshot.val();
-            // Inverser l'ordre pour voir les derniers messages en premier
-            const entries = Object.entries(data).reverse();
-
-            entries.forEach(([key, value]) => {
-                const messageHtml = `
-                    <div class="message-item">
-                        <div class="msg-name">Anarana: ${escapeHtml(value.anarana)}</div>
-                        <div class="msg-text">Firariantsoa: ${escapeHtml(value.firariantsoa)}</div>
-                    </div>
-                `;
-                messagesList.innerHTML += messageHtml;
-            });
-        } else {
-            messagesList.innerHTML = "<p>Tsy mbola misy hafatra voaray.</p>";
-        }
+        const messageHtml = `
+            <div class="message-item">
+                <div class="msg-name">Anarana: ${escapeHtml(value.anarana)}</div>
+                <div class="msg-text">Firariantsoa: ${escapeHtml(value.firariantsoa)}</div>
+            </div>
+        `;
+        
+        messagesList.innerHTML += messageHtml;
     });
 }
-
 // Fonction de sécurité pour éviter les failles XSS (injection de scripts)
 function escapeHtml(text) {
     return text

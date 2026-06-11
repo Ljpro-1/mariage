@@ -384,3 +384,28 @@ footer {
     text-align: center;
     color: #888;
 }
+
+
+.programme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+
+    background: linear-gradient(135deg, #6d4c41, #8d6e63);
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 20px;
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.programme-btn.hidden-scroll {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+}

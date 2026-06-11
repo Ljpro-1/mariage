@@ -107,3 +107,14 @@ function escapeHtml(text) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
+
+
+const programmeBtn = document.getElementById("programmeBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        programmeBtn.classList.add("hidden-scroll");
+    } else {
+        programmeBtn.classList.remove("hidden-scroll");
+    }
+});
